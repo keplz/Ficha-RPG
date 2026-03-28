@@ -3,7 +3,8 @@
 import { useState } from "react"
 
 import CharacterCard from "@/components/character/CharacterCard"
-import { Character } from "@/types/Character"
+import { personagens } from "@/data/personagens"   
+
 
 import Modal from "@/components/modal/Modal"
 
@@ -12,21 +13,6 @@ import "@/styles/dashboard.css"
 export default function MestreHub() {
 
   const [modalAberto, setModalAberto] = useState(false)
-
-  const personagens: Character[] = [
-    {
-      id: 1,
-      nome: "Zamanin'",
-      classe: "Lorde",
-      avatar: "/images/characters/kaiser.png"
-    },
-    {
-      id: 2,
-      nome: "Nezinomas",
-      classe: "Maldição",
-      avatar: "/images/characters/mage.png"
-    }
-  ]
 
   return (
     <main className="dashboard">

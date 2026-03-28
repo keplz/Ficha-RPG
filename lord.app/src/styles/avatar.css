@@ -1,0 +1,41 @@
+/* avatar.css */
+
+.avatarCard {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Nome do personagem */
+.nome {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+/* Grid de informações */
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Cada campo */
+.infoItem {
+  background: #2a2a2a;
+  padding: 10px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label */
+.infoItem span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Valor */
+.infoItem strong {
+  font-size: 14px;
+}

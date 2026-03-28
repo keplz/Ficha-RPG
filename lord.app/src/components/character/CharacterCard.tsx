@@ -1,5 +1,6 @@
 "use client"
 
+import { useRouter } from "next/navigation"
 import { Character } from "@/types/Character"
 
 type Props = {
@@ -8,12 +9,17 @@ type Props = {
 
 export default function CharacterCard({ personagem }: Props) {
 
-  const abrirPersonagem = () => {
-    console.log("Abrir ficha:", personagem.id)
+  const router = useRouter()
+
+  const abrirFicha = () => {
+    router.push(`/personagem/${personagem.id}`)
   }
 
   return (
-    <button className="characterCard" onClick={abrirPersonagem}>
+    <button
+      className="characterCard"
+      onClick={abrirFicha}
+    >
 
       <img
         src={personagem.avatar}
@@ -21,7 +27,7 @@ export default function CharacterCard({ personagem }: Props) {
       />
 
       <div>
-        <h3>{personagem.nome}</h3>
+        <h3>{personagem.name}</h3>
         <p>{personagem.classe}</p>
       </div>
 
