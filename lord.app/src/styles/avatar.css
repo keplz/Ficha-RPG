@@ -1,6 +1,7 @@
 /* avatar.css */
 
 .avatarCard {
+  width: 100%;
   background: #1e1e1e;
   padding: 20px;
   border-radius: 12px;

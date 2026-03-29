@@ -1,4 +1,5 @@
 import { getCharacterById } from "@/lib/characters"
+import '@/styles/header.css'
 import Avatar from "@/components/character/Avatar"
 import Status from "@/components/character/Status"
 
@@ -21,11 +22,7 @@ export default async function PersonagemPage({ params }: Props) {
   return (
     <main style={{ padding: "40px", color: "white" }}>
 
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 250px",
-        gap: "20px"
-      }}>
+      <div className='headerContainer'>
         <Avatar personagem={personagem} />
         <Status personagem={personagem} />
       </div>
