@@ -1,0 +1,57 @@
+/* atributos.css */
+
+.atributosCard {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.atributosCard h3 {
+  margin-bottom: 10px;
+}
+
+/* GRID */
+.atributosGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* BOX */
+.attrBox {
+  background: #2a2a2a;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* label */
+.attrBox span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* valor */
+.attrBox strong {
+  font-size: 18px;
+}
+.mod {
+  font-weight: bold;
+  font-size: 13px;
+}
+/* cores */
+.positivo {
+  color: #2ecc71; /* verde */
+}
+
+.negativo {
+  color: #e74c3c; /* vermelho */
+}
+@media (max-width: 768px) {
+  .atributosGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

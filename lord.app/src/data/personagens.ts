@@ -6,14 +6,14 @@ export const personagens: Character[] = [
     name: "Zamanin",
     jogador: "Mestre",
     classe: "Deus",
-    tendencia: "Neutro",
-    sexo: "Desconhecido",
+    tendencia: "",
+    sexo: "",
     idade: 9999,
     divindade: "Tempo",
-    tamanho: "Médio",
+    tamanho: "Grande",
     avatar: "",
     nivel: 9999,
-    xp: 0,
+    xp:99,
 
     atributos: {
       forca: 14,
@@ -21,20 +21,52 @@ export const personagens: Character[] = [
       constituicao: 13,
       inteligencia: 10,
       sabedoria: 11,
-      carisma: 15,
+      carisma: 15
     },
 
     status: {
-      pv: 35,
-      pm: 20,
-      defesa: 16,
-      deslocamento: 9,
+      pv: 999,
+      pm: 999,
+      defesa: 10,
+      deslocamento: 9
     },
 
     combate: {
-      ataque: 8,
-      dano: "1d8+3",
-      iniciativa: 2,
+      dano: "1d12+5",
+      iniciativa: 5
     },
-  },
+
+    arma: {
+      nome: "Espada Longa",
+      atributo: 'forca',
+      dano: '1d8',
+      bonusAtaque: 2
+    },
+
+    // 🔥 NOVO BLOCO
+    equipamentos: {
+      armadura: {
+        nome: "Armadura do Tempo",
+        tipo: "armadura",
+        defesa: 5
+      },
+
+      escudo: {
+        nome: "Escudo Cronal",
+        tipo: "escudo",
+        defesa: 3
+      },
+
+      acessorios: [
+        {
+          nome: "Anel da Eternidade",
+          tipo: "acessorio"
+        },
+        {
+          nome: "Amuleto do Vazio",
+          tipo: "acessorio"
+        }
+      ]
+    }
+  }
 ]

@@ -1,3 +1,5 @@
+import { Equipamento } from "./Equipamentos"
+import { Arma } from "./Arma"
 export type Character = {
   id: number
 
@@ -16,6 +18,7 @@ export type Character = {
   /* PROGRESSÃO */
   nivel: number
   xp: number
+
 
   /* ATRIBUTOS */
   atributos: {
@@ -37,8 +40,15 @@ export type Character = {
 
   /* COMBATE */
   combate: {
-    ataque: number
     dano: string
     iniciativa: number
+  }
+
+  arma?: Arma
+
+  equipamentos: {
+    armadura?: Equipamento
+    escudo?: Equipamento
+    acessorios: Equipamento[]
   }
 }

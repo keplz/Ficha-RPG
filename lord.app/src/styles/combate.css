@@ -1,0 +1,80 @@
+/* combate.css */
+
+.combateCard {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.combateCard h3 {
+  margin-bottom: 10px;
+}
+
+.combateGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.combatItem {
+  background: #2a2a2a;
+  padding: 10px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* label */
+.combatItem {
+  text-align: center;
+  align-items: center;
+  padding: 14px;
+}
+
+/* valor */
+.combatItem strong {
+  font-size: 16px;
+}
+
+.combatLinhaArma {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #2a2a2a;
+  padding: 10px;
+  border-radius: 10px;
+
+  margin-bottom: 10px;
+  gap: 4px;
+}
+
+.combatLinhaArma div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  flex: 1;
+}
+
+.combatLinhaArma span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.combatLinhaArma strong {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .combateGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .combateGrid {
+    grid-template-columns: 1fr;
+  }
+}
