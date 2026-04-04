@@ -11,9 +11,10 @@ export const personagens: Character[] = [
     idade: 9999,
     divindade: "Tempo",
     tamanho: "Grande",
-    avatar: "",
+    avatar: "/images/zamanin.png",
     nivel: 9999,
     xp:99,
+    xpMax: 1000,
 
     atributos: {
       forca: 14,
@@ -26,10 +27,37 @@ export const personagens: Character[] = [
 
     status: {
       pv: 999,
+      pvMax: 1000,
       pm: 999,
+      pmMax: 1000,
       defesa: 10,
       deslocamento: 9
     },
+
+    habilidades: [
+      {
+        nome: "Ataque Poderoso",
+        descricao: "Você causa +2 de dano em ataques corpo a corpo."
+      },
+      {
+        nome: "Fúria",
+        descricao: "Você causa +2 de dano em ataques corpo a corpo."
+
+      }
+    ],
+
+    magia: [
+      {
+        nome: "Bola de Fogo",
+        custo: 5,
+        descricao: "Causa 2d6 de dano em área."
+      },
+      {
+        nome: "Cura",
+        custo: 3,
+        descricao: "Recupera 1d8 de vida"
+      }
+    ],
 
     combate: {
       dano: "1d12+5",

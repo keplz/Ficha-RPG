@@ -1,0 +1,92 @@
+/* magias.css */
+
+.magiasCard {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.magiasList {
+  display: flex;
+  flex-direction: column;
+  margin:0px;
+}
+
+.magiaItem {
+  background: #2a2a2a;
+  padding: 10px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.magiaNome {
+  font-weight: bold;
+}
+
+.magiaCusto {
+  font-size: 12px;
+  color: #aaa;
+  margin-left: 6px;
+}
+
+.magiaDesc {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.magiasHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 10px;
+}
+
+.manaBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.manaBar {
+  width: 100px;
+  height: 8px;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.manaFill {
+  height: 100%;
+  background: #4aa3ff;
+  transition: width 0.3s;
+}
+
+.manaBox span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.magiaHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 4px;
+}
+
+.magiaHeader span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.magiaItem {
+  background: #2a2a2a;
+  padding: 12px;
+  border-radius: 8px;
+
+  margin-bottom: 8px;
+}

@@ -9,10 +9,10 @@ type Props = {
 export default function Status({ personagem }: Props) {
 
   const hpAtual = personagem.status.pv
-  const hpMax = 100 // depois você pode calcular isso
+  const hpMax = personagem.status.pvMax // depois você pode calcular isso
 
   const xpAtual = personagem.xp
-  const xpMax = 1000 // depois você ajusta por nível
+  const xpMax = personagem.xpMax // depois você ajusta por nível
 
   const hpPercent = (hpAtual / hpMax) * 100
   const xpPercent = (xpAtual / xpMax) * 100

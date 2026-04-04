@@ -1,5 +1,8 @@
 import { Equipamento } from "./Equipamentos"
 import { Arma } from "./Arma"
+import { Habilidade } from "./Habilidade"
+import { Magia } from "./Magia"
+
 export type Character = {
   id: number
 
@@ -18,6 +21,7 @@ export type Character = {
   /* PROGRESSÃO */
   nivel: number
   xp: number
+  xpMax: number
 
 
   /* ATRIBUTOS */
@@ -33,10 +37,16 @@ export type Character = {
   /* STATUS (recursos) */
   status: {
     pv: number
+    pvMax: number
     pm: number
+    pmMax: number
     defesa: number
     deslocamento: number
   }
+
+  habilidades?: Habilidade[]
+
+  magia?: Magia[]
 
   /* COMBATE */
   combate: {

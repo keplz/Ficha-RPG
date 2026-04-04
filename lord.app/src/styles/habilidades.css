@@ -1,0 +1,33 @@
+/* habilidades.css */
+
+.habilidadesText {
+    margin-bottom: 5px;
+}
+
+.habilidadesCard {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.habilidadesList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.habilidadeItem {
+  background: #2a2a2a;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.habilidadeItem strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.habilidadeItem p {
+  font-size: 13px;
+  color: #aaa;
+}

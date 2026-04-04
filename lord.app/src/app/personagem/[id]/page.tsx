@@ -6,6 +6,8 @@ import Atributos from "@/components/character/Atributos"
 import Combate from "@/components/character/Combate"
 import Pericias from "@/components/character/Pericias"
 import Equipamentos from "@/components/character/Equipamentos"
+import Habilidades from "@/components/character/Habilidades"
+import Magias from "@/components/character/Magias"
 
 type Props = {
   params: Promise<{
@@ -35,8 +37,8 @@ export default async function PersonagemPage({ params }: Props) {
         <Combate personagem={personagem} />
         <Pericias personagem={personagem} />
         <Equipamentos personagem={personagem} />
-        <div className="placeholder">Habilidades</div>
-        <div className="placeholder">Magias</div>
+        <Habilidades personagem={personagem} />
+        <Magias personagem={personagem} />
       </div>
 
     </main>
