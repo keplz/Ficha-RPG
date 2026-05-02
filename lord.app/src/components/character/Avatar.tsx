@@ -2,6 +2,7 @@
 import "@/styles/avatar.css"
 import { Character } from "@/types/Character"
 import { useState } from 'react'
+import CampoEditavel from "../ui/CampoEditavel"
 
 type Props = {
   personagem: Character
@@ -12,7 +13,7 @@ export default function Avatar({ personagem, setPersonagem }: Props) {
 
   const [editando, setEditando] = useState<string | null>(null)
 
-  function atualizarCampo(campo: keyof Character, valor: string) {
+  function atualizarCampo(campo: keyof Character, valor: any) {
     setPersonagem({
       ...personagem,
       [campo]: valor
@@ -38,128 +39,58 @@ export default function Avatar({ personagem, setPersonagem }: Props) {
         </h2>
       )}
 
-      <div className="infoGrid">
+    <div className="infoGrid">
 
-        <div className="infoItem">
-          <span>Jogador</span>
-            {editando === 'jogador' ? (
-              <input
-                className="editavelInput"
-                value={personagem.jogador}
-                onChange={(e) => atualizarCampo('jogador', e.target.value)}
-                onBlur={() => setEditando(null)}
-                autoFocus
-              />
-            ) : (
-              <strong onClick={() => setEditando('jogador')}>
-                {personagem.jogador || '-'}
-              </strong>
-            )}
-        </div>
+      <CampoEditavel
+        label="Jogador"
+        campo="jogador"
+        valor={personagem.jogador}
+        atualizar={atualizarCampo}
+      />
 
-        <div className="infoItem">
-          <span>Classe</span>
-            {editando === 'classe' ? (
-              <input
-                className="editavelInput"
-                value={personagem.classe}
-                onChange={(e) => atualizarCampo('classe', e.target.value)}
-                onBlur={() => setEditando(null)}
-                autoFocus
-              />
-            ) : (
-              <strong onClick={() => setEditando('classe')}>
-                {personagem.classe || '-'}
-              </strong>
-            )}
-        </div>
+      <CampoEditavel
+        label="Classe"
+        campo="classe"
+        valor={personagem.classe}
+        atualizar={atualizarCampo}
+      />
 
-        <div className="infoItem">
-          <span>Tendência</span>
-            {editando === 'tendencia' ? (
-              <input
-                className="editavelInput" 
-                value={personagem.tendencia}
-                onChange={(e) => atualizarCampo('tendencia', e.target.value)}
-                onBlur={() => setEditando(null)}
-                autoFocus
-              />
-            ) : (
-              <strong onClick={() => setEditando('tendencia')}>
-                {personagem.tendencia || '-'}
-              </strong>
-            )}
-        </div>
+      <CampoEditavel
+        label="Tendência"
+        campo="tendencia"
+        valor={personagem.tendencia}
+        atualizar={atualizarCampo}
+      />
 
-        <div className="infoItem">
-          <span>Sexo</span>
-            {editando === 'sexo' ? (
-              <input
-                className="editavelInput" 
-                value={personagem.sexo}
-                onChange={(e) => atualizarCampo('sexo', e.target.value)}
-                onBlur={() => setEditando(null)}
-                autoFocus
-              />
-            ) : (
-              <strong onClick={() => setEditando('sexo')}>
-                {personagem.sexo || '-'}
-              </strong>
-            )}
-        </div>
+      <CampoEditavel
+        label="Sexo"
+        campo="sexo"
+        valor={personagem.sexo}
+        atualizar={atualizarCampo}
+      />
 
-        <div className="infoItem">
-          <span>Idade</span>
-            {editando === 'idade' ? (
-              <input
-                className="editavelInput" 
-                value={personagem.idade}
-                onChange={(e) => atualizarCampo('idade', e.target.value)}
-                onBlur={() => setEditando(null)}
-                autoFocus
-              />
-            ) : (
-              <strong onClick={() => setEditando('idade')}>
-                {personagem.idade || '-'}
-              </strong>
-            )}
-        </div>
+      <CampoEditavel
+        label="Idade"
+        campo="idade"
+        valor={personagem.idade}
+        atualizar={atualizarCampo}
+      />
 
-        <div className="infoItem">
-          <span>Divindade</span>
-            {editando === 'divindade' ? (
-              <input
-                className="editavelInput" 
-                value={personagem.divindade}
-                onChange={(e) => atualizarCampo('divindade', e.target.value)}
-                onBlur={() => setEditando(null)}
-                autoFocus
-              />
-            ) : (
-              <strong onClick={() => setEditando('divindade')}>
-                {personagem.divindade || '-'}
-              </strong>
-            )}
-        </div>
+      <CampoEditavel
+        label="Divindade"
+        campo="divindade"
+        valor={personagem.divindade}
+        atualizar={atualizarCampo}
+      />
 
-        <div className="infoItem">
-          <span>Tamanho</span>
-            {editando === 'tamanho' ? (
-              <input
-                className="editavelInput" 
-                value={personagem.tamanho}
-                onChange={(e) => atualizarCampo('tamanho', e.target.value)}
-                onBlur={() => setEditando(null)}
-                autoFocus
-              />
-            ) : (
-              <strong onClick={() => setEditando('tamanho')}>
-                {personagem.tamanho || '-'}
-              </strong>
-            )}
-        </div>
+      <CampoEditavel
+        label="Tamanho"
+        campo="tamanho"
+        valor={personagem.tamanho}
+        atualizar={atualizarCampo}
+      />
 
-      </div>
-    </div>
+    </div>    
+</div>
   )
 }
